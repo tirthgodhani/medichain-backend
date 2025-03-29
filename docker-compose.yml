@@ -6,7 +6,7 @@ services:
     ports:
       - "5001:5001"
     environment:
-      - NODE_ENV=production
+      - NODE_ENV=development
       - MONGO_URI=mongodb+srv://user:user@book.9ap05.mongodb.net/health-data-system?retryWrites=true&w=majority&appName=Book
       - JWT_SECRET=your_jwt_secret_key_replace_in_production
     restart: unless-stopped
