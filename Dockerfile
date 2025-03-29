@@ -15,10 +15,10 @@ COPY . .
 
 # Environment variables (you can also pass these at runtime)
 ENV NODE_ENV=production
-ENV PORT=5000
+ENV PORT=5001
 
 # Expose the port the app runs on
-EXPOSE 5000
+EXPOSE 5001
 
 # Command to run the application
 CMD ["npm", "start"]
