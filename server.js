@@ -19,7 +19,16 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+// app.use(cors());
+const corsOptions = {
+  origin: '*', // Allow all origins
+  methods: 'GET,POST,PUT,DELETE,OPTIONS', // Allow all methods
+  allowedHeaders: 'Content-Type, Authorization', // Allow specific headers
+  credentials: true, // Optional: Allow cookies (if needed for your application)
+};
+
+// Use CORS middleware with the above configuration
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
